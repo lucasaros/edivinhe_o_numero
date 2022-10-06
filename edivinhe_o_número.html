@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>","<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroAleatorio = Math.round(Math.random() * 10);
+
+    var tentativas = 1;
+
+    while(tentativas <= 5) {
+
+    var chute = parseInt(prompt("Adivinhe o Número!"));
+
+    if(chute == numeroAleatorio) {
+
+        mostra("Você ACERTOU :) o número era " + numeroAleatorio + "!!");
+        break;
+
+    } else {
+
+        mostra("Você ERROU :(");
+    }
+
+    tentativas++;
+    }
+
+    mostra("FIM");
+
+</script>
